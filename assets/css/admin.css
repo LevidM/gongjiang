@@ -452,3 +452,7 @@ gallery.html css
 .am-radio-inline,.am-checkbox-inline{
   padding-top:0!important;
 }
+
+.am-selected{
+  width: 100%!important;
+}
