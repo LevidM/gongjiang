@@ -456,3 +456,8 @@ gallery.html css
 .am-selected{
   width: 100%!important;
 }
+
+.lm-right{
+  float: right;
+  margin-top: .5em;
+}

@@ -79,21 +79,15 @@
 
                                     <!-- 完成当个步骤后，显示该图标 -->
                                     <i class="am-icon-check tpl-left-nav-content-ico am-fr am-margin-left"></i>
-
                                 </a>
                                 <a href="application-step2.html">
                                     <i class="am-icon-angle-right"></i>
-                                    <span>步骤2 所在企业基本情况</span>
-                                </a>
+                                    <span>步骤2 企业基本情况</span>
                                 </a>
                                 <a href="application-step3.html">
                                     <i class="am-icon-angle-right"></i>
-                                    <span>步骤3 附件上传</span>
+                                    <span>步骤3 提交&导出</span>
                                 </a>
-                                <a href="application-step6.html">
-                                        <i class="am-icon-angle-right"></i>
-                                        <span>步骤4 提交&导出</span>
-                                    </a>
                             </li>
                         </ul>
                     </li>
@@ -155,11 +149,17 @@
             </ol>
 
             <div class="tpl-portlet-components">
-                    <div class="portlet-title">
-                            <div class="caption font-green bold">
-                                <span class="am-icon-list"></span> 申报人基本情况
-                            </div>
-                        </div>
+
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-list"></span> 申报人基本情况
+                    </div>
+
+                    <div class="am-btn-group am-btn-group-xs lm-right">
+                        <button type="button" class="am-btn am-btn-default am-btn-success" onclick="window.location.href='application-step1.html'"><span class="am-icon-plus"></span> 新增申报人</button>
+                    </div>
+                </div>
+
                 <div class="tpl-block ">
 
                     <div class="am-g tpl-amazeui-form">
@@ -253,7 +253,7 @@
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-2 am-form-label">主要工作简历</label>
                                     <div class="am-u-sm-10">
-                                        <textarea class="" rows="20" id="user-intro" maxlength=“400” placeholder="400字以内，可另附页"></textarea>
+                                        <textarea class="" rows="20" id="user-intro" maxlength=“400” placeholder="400字以内"></textarea>
                                     </div>
                                 </div>
 
@@ -273,7 +273,97 @@
 
 
                                 <hr></hr>
+                                <div class="portlet-title">
+                                    <div class="caption font-green bold">
+                                        <span class="am-icon-list"></span> 附件上传
+                                    </div>
+                                </div>
+                
+                                <div class="tpl-block ">
+                
+                                    <div class="am-g">
+                                            <div class="am-u-sm-12">
+                                                <form class="am-form">
+                                                    <table class="am-table am-table-striped am-table-hover table-main">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="table-id">ID</th>
+                                                                <th class="table-title">附件类型</th>
+                                                                <th class="table-type">附件上传</th>
+                                                                <th class="table-author am-hide-sm-only">附件名称</th>
+                                                                <th class="table-date am-hide-sm-only">上传时间</th>
+                                                                <th class="table-set">操作</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                
 
+                                                            <!-- 已上传样式 -->
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>身份证扫描件</td>
+                                                                <td><i class="am-icon-check am-text-secondary"></i> 已提交</td>
+                                                                <td class="am-hide-sm-only">身份证扫描件.jpg</td>
+                                                                <td class="am-hide-sm-only">2017-9-4</td>
+                                                                <td>
+                                                                    <div class="am-btn-toolbar">
+                                                                            <div class="am-btn-group am-btn-group-xs">
+                                                                                <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only am-text-secondary"><span class="am-icon-download"></span> 查看</button>
+                                                                                <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only am-text-secondary"><span class="am-icon-trash"></span> 删除</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>社保清单</td>
+                                                                <td><i class="am-icon-check am-text-secondary"></i> 已提交</td>
+                                                                <td class="am-hide-sm-only">社保清单.zip</td>
+                                                                <td class="am-hide-sm-only">2017-9-4</td>
+                                                                <td>
+                                                                    <div class="am-btn-toolbar">
+                                                                            <div class="am-btn-group am-btn-group-xs">
+                                                                                <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only am-text-secondary"><span class="am-icon-download"></span> 查看</button>
+                                                                                <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only am-text-secondary"><span class="am-icon-trash"></span> 删除</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <!-- 未上传样式 -->
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>相关证明材料、荣誉证书</td>
+                                                                <td>
+                                                                    <div class="am-btn-group am-btn-group-xs am-form-file">
+                                                                        <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only am-text-secondary"><span class="am-icon-cloud-upload"></span> 点击上传</button> 
+                                                                        <input class="am-upload-input" type="file" multiple>
+                                                                       </td>
+                                                                <td class="am-hide-sm-only"></td>
+                                                                <td class="am-hide-sm-only"></td>
+                                                                <td>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                
+                                                    <hr>
+                
+                                                    <p><span class="label label-danger">提示:</span> <small>相关证明材料、荣誉证书请压缩打包上传，大小不超过5M。</small>
+                                                    </p>
+                                                </form>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                
+                                    <div class="am-cf"></div>
+                
+                                </div>
+                            </div>
                         
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-2">
